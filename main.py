@@ -286,7 +286,15 @@ st.header("Documentation")
 with st.expander("Guide d'utilisation"):
     st.markdown(
         """
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit augue a urna vehicula iaculis. Curabitur pharetra laoreet ultrices. Vivamus a suscipit velit. Mauris quis faucibus velit. Pellentesque aliquet, est in tincidunt suscipit, dui elit luctus velit, convallis tristique ipsum ante et ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum ipsum id molestie venenatis. Nulla dictum eros id sem congue, non lacinia risus rutrum. Morbi semper et mi non facilisis. Suspendisse gravida est sed justo congue, nec vulputate mauris dignissim. Morbi vel lorem id dolor tempus aliquet pellentesque vitae diam. Duis sit amet tincidunt nulla, id consequat orci. Proin id luctus magna.
+        Cette application sert à calculer des hauteurs de corps de lave **boueuse** en régime permanent uniforme à partir d'une formule *rhéologique* de type **Herschel-Bulkley** (Coussot 1992) par une approche paramétrique : en fonction de la pente (sur une plage de valeurs donnée), de caractéristiques rhéologiques (plusieurs valeurs de seuils de contrainte possibles) et du débit (plusieurs valeurs de débit possibles).
+        Les autres variables de la loi sont fixées à une valeur unique (et sont modifiables par l’utilisateur) : masse volumique $\\rho$ et rapport $\\frac{K}{\\tau_c}$.
+
+        L’approche paramétrique est généralement considérée du fait des fortes incertitudes et de la variabilité au cours des crues pour un torrent donné des paramètres rhéologiques ou du débit de pointe.
+        Il est ainsi recommandé de rechercher des indices de la variabilité de ces paramètres dans les crues passées (hauteur/sections de passage) ou dans les formes des dépôts sur le terrain (hauteur de dépôt sur une pente donnée).
+
+        Rappelons que cette loi ne permet pas d’estimer la hauteur du front de la lave qui peut être constituée de très gros blocs (et donc être plus haut que le corps de lave).
+        Il est donc recommandé de mener une analyse spécifique sur cet aspect en plus du calcul du corps de lave (taille du front lors de crues passées ? présence de gros blocs à proximité du lit ? taille de ces gros blocs ? etc.).
+        Ceci peut amener à considérer une certaine gamme de *revanche* par rapport au calcul de corps de lave, à adapter selon les cas.
         """
     )
 
